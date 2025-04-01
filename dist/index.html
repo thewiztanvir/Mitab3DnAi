@@ -41,7 +41,11 @@
       height: 100%;
       z-index: -1;
     }
-
+    @media screen and (max-width: 380px) {
+      #min-screen-height {
+    margin-top:30vh ;
+  }
+}
     /* .vapiButton {
         padding: 10px 20px;
         font-size: 16px;
@@ -67,11 +71,11 @@
     <p class="text-pink-500 text-3xl bg-amber-50">ajfioaj</p> -->
   <div id="scene-container"></div>
   <button class="fixed-button lg:mr-16" id="vapiButton1"><i class="fa-solid fa-phone"></i></button>
-  <header class="lg:h-screen border-b-lime-400">
+  <header class=" border-b-lime-400">
 
 
-    <nav class="fixed w-full z-20 top-0 pt-8 left-0">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav class="fixed w-full z-20 top-0 pt-8 left-0 px-5 md:px-14 lg:px-20 xl:px-20">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4">
 
         <!-- Hamburger icon for mobile -->
         <div class="flex items-center justify-between w-full md:hidden">
@@ -173,7 +177,7 @@
 
         </div>
 
-        <!-- Desktop layout remains unchanged -->
+        <!-- Desktop layout -->
         <div class="hidden md:flex md:items-center md:justify-between w-full">
           <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
             <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Mitab <br>Sany.</span>
@@ -321,13 +325,13 @@
     <!-- hero section start  -->
 
     <section class="">
-      <div class="md:grid md:grid-cols-2  lg:px-20 px-5  md:pt-32 pt-96 ">
+      <div class="md:grid md:grid-cols-2  px-5 md:px-14 lg:px-20 md:pt-32 pt-80 ">
         <!-- header content start -->
         <div class="">
           <div class="pt-10 " style="z-index: 2; position: relative; ">
             <h3 class="text-4xl md:text-3xl mt-40 md:mt-0">Heya!</h3>
-            <h1 class="lg:text-8xl md:text-5xl text-7xl mt-10 md:mt-5">I'm Mitab </h1>
-            <h2 class="lg:text-4xl md:text-3xl text-3xl mt-5">AI Engineer & Frontend Developer</h2>
+            <h1 class="lg:text-7xl md:text-5xl text-6xl mt-10 md:mt-5">I'm Mitab </h1>
+            <h2 class="lg:text-4xl md:text-3xl text-3xl mt-5">AI Automation & Frontend Developer</h2>
             <p class="text-xl mt-10 md:mt-5 hidden md:block text-justify">Specializing in <strong>AI
                 Engineering</strong>, <strong>Frontend
                 Development</strong>,
@@ -362,7 +366,7 @@
 
   </header>
 
-  <section id="about" class="md:grid md:grid-cols-2 px-16 md:py-10 h-screen pt-11">
+  <section id="about" class="md:grid md:grid-cols-2 px-5 md:px-14 lg:px-20     py-16">
     <!-- about image section start -->
     <div class="w-fit lg:p-16 hidden md:block">
       <img src="img/mitab-model.png" alt="Mitab-Image">
@@ -372,12 +376,12 @@
 
     <!-- about content start -->
     <div>
-      <div class="lg:pt-72 text-center md:text-left">
+      <div class="lg:pt-72 text-justify md:text-left">
         <h3 class="text-2xl"><i class="fa-solid fa-paper-plane"></i> About Me</h3>
         <h2 class="text-4xl mt-5">Who Am I</h2>
 
 
-        <p class="mt-5 text-lg">As an AI Engineer and Frontend Developer, I specialize in creating intelligent,
+        <p class="mt-5 text-lg">As an AI Automation and Frontend Web Developer, I specialize in creating intelligent,
           user-friendly digital experiences. My expertise includes AI Engineering, where I design and implement advanced
           AI models and algorithms; Frontend Development, where I craft responsive, visually appealing web interfaces;
           Automation, where I streamline workflows and improve efficiency; and AI Voice Assistants, where I develop and
@@ -398,7 +402,7 @@
 
   <!-- Project section start -->
   <section id="project">
-    <div class="mt-40 md:mt-80 px-20">
+    <div id="min-screen-height" class=" md:mt-80 px-5 md:px-14 lg:px-20">
       <h2 class="text-center text-4xl font bold">My Portfolio</h2>
       <div class="grid md:grid-cols-2 gap-9 mt-20">
 
@@ -484,11 +488,11 @@
 
   <!-- footer start -->
   <footer id="contact">
-    <div class="px-10 md:px-20 my-20 ">
-      <div class="px-10 pt-32">
-        <h1 class="text-7xl  ">Let's <br>Connect. <i class="hidden md:block fa-solid fa-arrow-right"></i> <i class="md:hidden fa-solid fa-arrow-down"></i></h1>
+    <div class="px-5 md:px-14 lg:px-20 my-20 ">
+      <div class="  pt-32">
+        <h1 class="text-5xl md:text-6xl  ">Let's <br>Connect. <i class="hidden md:block fa-solid fa-arrow-right"></i> <i class="md:hidden fa-solid fa-arrow-down"></i></h1>
       </div>
-      <div class="grid lg:grid-cols-4 grid-cols-2 justify-center items-center mt-10">
+      <div class="grid md:grid-cols-4 grid-cols-2 gap-4 justify-center items-center mt-10">
         <!-- social icons -->
         <!-- email -->
         <div class="flex flex-col items-center text-center">
@@ -535,7 +539,7 @@
 
     </div>
     <hr>
-    <div class=" px-10 md:px-20 my-20">
+    <div class=" px-5 md:px-14 lg:px-20 my-20">
       <div class="flex justify-between items-center">
         <!-- Left content -->
         <div>
