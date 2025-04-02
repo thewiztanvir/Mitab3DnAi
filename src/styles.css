@@ -289,11 +289,11 @@
 
 .card-content {
   position: relative;
-  z-index: 2; /* Ensures the text is above the background layer */
-  color: white; /* Text color */
+  z-index: 2; 
+  color: white; 
   padding: 20px;
-  text-align: center; /* Center-align text */
-  font-family: Arial, sans-serif; /* Optional: Font styling */
+  text-align: center; 
+  font-family: Arial, sans-serif; 
 }
 /* card button part */
 
