@@ -23,7 +23,7 @@
       height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       scroll-behavior: smooth;
-       
+
     }
 
     body {
@@ -41,11 +41,13 @@
       height: 100%;
       z-index: -1;
     }
+
     @media screen and (max-width: 380px) {
       #min-screen-height {
-    margin-top:30vh ;
-  }
-}
+        margin-top: 30vh;
+      }
+    }
+
     /* .vapiButton {
         padding: 10px 20px;
         font-size: 16px;
@@ -74,13 +76,13 @@
   <header class=" border-b-lime-400">
 
 
-    <nav class="fixed w-full z-20 top-0 pt-8 left-0 px-5 md:px-14 lg:px-20 xl:px-20">
+    <nav class=" fixed w-full z-20 top-0  left-0 px-5 md:px-14 lg:px-20 xl:px-20">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4">
 
         <!-- Hamburger icon for mobile -->
         <div class="flex items-center justify-between w-full md:hidden">
           <button id="hamburger-button" type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-100 hover:text-gray-600 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black ">
             <span class="sr-only">Open main menu</span>
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -89,8 +91,8 @@
           </button>
           <!-- Logo in center for mobile -->
           <a href="https://flowbite.com/" class="flex items-center mx-auto">
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Mitab <br>Sany. </span>
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Mitab <br>Sany. </span>
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white"></span>
           </a>
           <!-- Get Started button for mobile -->
           <button class="space-button">
@@ -179,8 +181,8 @@
 
         <!-- Desktop layout -->
         <div class="hidden md:flex md:items-center md:justify-between w-full">
-          <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Mitab <br>Sany.</span>
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Mitab <br>Sany.</span>
           </a>
           <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
 
@@ -272,25 +274,48 @@
             <!-- Get Started button for desktop end here  -->
 
           </div>
-          <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-desktop">
+          <div class="items-center px-4 justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-desktop">
             <ul
               class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
               <li>
                 <a href="#"
-                  class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent hover:text-blue-700 md:p-0"
-                  aria-current="page">Home</a>
+                  class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-gray-800/30 backdrop-blur-sm px-6 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20">
+                  <span class="text-lg">Home</span>
+                  <div
+                    class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]">
+                    <div class="relative h-full w-10 bg-white/20"></div>
+                  </div>
+                </a>
               </li>
               <li>
                 <a href="#about"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                  class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-gray-800/30 backdrop-blur-sm px-6 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20">
+                  <span class="text-lg">About</span>
+                  <div
+                    class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]">
+                    <div class="relative h-full w-10 bg-white/20"></div>
+                  </div>
+                </a>
               </li>
               <li>
                 <a href="#project"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Project</a>
+                  class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-gray-800/30 backdrop-blur-sm px-6 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20">
+                  <span class="text-lg">Projects</span>
+                  <div
+                    class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]">
+                    <div class="relative h-full w-10 bg-white/20"></div>
+                  </div>
+                </a>
               </li>
               <li>
                 <a href="#contact"
-                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                  class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-gray-800/30 backdrop-blur-sm px-6 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20">
+                  <span class="text-lg">Contract</span>
+                  <div
+                    class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]">
+                    <div class="relative h-full w-10 bg-white/20"></div>
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
@@ -299,22 +324,19 @@
 
       <!-- Mobile menu items -->
       <div class="hidden md:hidden" id="navbar-mobile">
-        <ul class="flex flex-col p-4  font-medium border border-gray-100 rounded-lg m-3">
+        <ul
+          class="flex flex-col p-4  font-medium border border-orange-500 rounded-lg m-3 bg-cyan-300/20 backdrop-blur-sm ">
           <li>
-            <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Home</a>
+            <a href="#" class="block py-2 px-3  rounded  text-white ">Home</a>
           </li>
           <li>
-            <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">About</a>
+            <a href="#about" class="block py-2 px-3 rounded dark:text-white">About</a>
           </li>
           <li>
-            <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Project</a>
+            <a href="#project" class="block py-2 px-3  rounded dark:text-white">Projects</a>
           </li>
           <li>
-            <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Contact</a>
+            <a href="#contract" class="block py-2 px-3  rounded dark:text-white">Contact</a>
           </li>
         </ul>
       </div>
@@ -490,7 +512,8 @@
   <footer id="contact">
     <div class="px-5 md:px-14 lg:px-20 my-20 ">
       <div class="  pt-32">
-        <h1 class="text-5xl md:text-6xl  ">Let's <br>Connect. <i class="hidden md:block fa-solid fa-arrow-right"></i> <i class="md:hidden fa-solid fa-arrow-down"></i></h1>
+        <h1 class="text-5xl md:text-6xl  ">Let's <br>Connect. <i class="hidden md:block fa-solid fa-arrow-right"></i> <i
+            class="md:hidden fa-solid fa-arrow-down"></i></h1>
       </div>
       <div class="grid md:grid-cols-4 grid-cols-2 gap-4 justify-center items-center mt-10">
         <!-- social icons -->
