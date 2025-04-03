@@ -10,23 +10,80 @@
 *{
     font-family: 'MyCustomFont';
 }
+
 .fixed-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 60px; /* Set width */
-  height: 60px; /* Set height to match width */
-  background-color: #f2f5f8;
-  color: rgb(23, 22, 22);
+  width: 60px;
+  height: 60px;
+  background:  rgb(23, 22, 22); /* Keeping original background */
+  color: rgba(242, 245, 248, 0.8);
   border: none;
-  border-radius: 50%; /* Perfectly round */
+  border-radius: 50%;
   cursor: pointer;
-  z-index: 1000; /* Keep above other elements */
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease; /* Smooth transition */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  backdrop-filter: blur(40px);
+  box-shadow: 0 0 30px rgba(0, 238, 255, 0.3),
+              0 0 30px rgba(0, 238, 255, 0.2);
 }
+
+.fixed-button:hover {
+  background: rgb(23, 22, 22); /* Keeping hover effect */
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 238, 255, 0.6),
+              0 0 40px rgba(0, 238, 255, 0.4);
+}
+
+/* Tooltip Styling */
+.fixed-button::after {
+  content: "Talk to my AI assistant";
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 238, 255, 0.2); /* Sleek neon effect */
+  color: rgb(0, 238, 255);
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px rgba(0, 238, 255, 0.5);
+}
+
+/* Show tooltip on hover */
+.fixed-button:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+  .fixed-button {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .fixed-button::after {
+    font-size: 12px;
+    padding: 8px 10px;
+    bottom: 65px;
+    max-width: 150px;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
 
 .fixed-button.red {
   background-color: #ff6347; /* Example color when active (red) */
@@ -34,8 +91,8 @@
 }
 
 .fixed-button.blue {
-  background-color: white; /* Example color when inactive (blue) */
-  color: black;
+  background:  rgb(23, 22, 22); /* Keeping original background */
+  color: rgba(242, 245, 248, 0.8);
 }
 
 /* Change button position for mobile devices */
